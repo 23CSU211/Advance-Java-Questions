@@ -1,0 +1,39 @@
+/*
+"In computing, End Of File (commonly abbreviated EOF) is a condition in a computer operating system where no more data can be read from a data source."
+The challenge here is to read n lines of input until you reach EOF, then number and print all n lines of content.
+
+*/
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
+public class a {
+
+	public static void main(String[] args) {
+		ArrayList<String> obj2 =new ArrayList<>();
+		
+				try {
+					 Scanner sc = new Scanner(new File("textfile.txt"));
+					
+					while(sc.hasNext()) {
+						String str=sc.nextLine();
+						
+
+						
+					
+						obj2.add(str);
+		
+					}
+					System.out.println("Number of lines are: "+obj2.size());
+					
+					
+					for(int i=0; i<obj2.size(); i++){
+						System.out.print(obj2.get(i)+"\n");
+					}
+					
+					
+
+					
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}}}
